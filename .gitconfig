@@ -1,0 +1,20 @@
+[alias]
+st = status
+ci = commit
+br = branch
+co = checkout
+df = diff
+dw = diff --word-diff
+lg = log -p
+lol = log --graph --decorate --pretty=oneline --abbrev-commit
+lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+llog = log --graph --date=local
+ls = ls-files
+undo = reset --hard
+pr = pull --rebase
+[color]
+ui = true
+[help]
+autocorrect = 1
+[core]
+	pager = less -eiFRSX
