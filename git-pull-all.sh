@@ -11,7 +11,8 @@ for x in `ls -1` ; do
 
     if [ -d ".git" ]; then
         if [ $(git svn info 2>&1 | grep "Unable to determine upstream SVN information" | wc -l) -eq 1 ]; then
-            git pull
+            git pull --rebase origin/master
+            git submodule update --init --recursive
         else
             git svn rebase
         fi  
